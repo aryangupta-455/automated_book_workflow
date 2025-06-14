@@ -1,66 +1,70 @@
-# automated_book_workflow
+# 📘 Automated Book Workflow System
 
-# DAY 1
-Today, I created a script using Playwright in VS Code to scrape chapter content and capture a screenshot from the specified Wikisource page. The script successfully extracts the text and saves a full-page image of the chapter. I will now push the completed work to the GitHub repository and consider Day 1's objectives achieved.
+This project automates the transformation of classical book chapters using AI — from scraping to rewriting, reviewing, and storing versions.
 
-# DAY 2
-Today, I implemented the AI-driven rewriting ("spinning") of the scraped chapter text using the OpenAI GPT model. The workflow includes sending the extracted content to the model via the OpenAI API and receiving a rephrased version styled in a more modern, engaging tone. The rewritten output is saved locally for further review and editing. This forms the foundation for the AI Writer agent in the automated book workflow pipeline.
+> ✅ Internship Task — AI Publication Pipeline
 
-✅ Tasks completed:
+---
 
-Integrated OpenAI API for content generation
+## 🚀 Features
 
-Developed script to spin chapter text
+- ✅ Scrapes book chapters from [Wikisource](https://en.wikisource.org/wiki/The_Gates_of_Morning/Book_1/Chapter_1)
+- ✅ AI rewriting using GPT (OpenAI API)
+- ✅ AI reviewing (editing/clarifying)
+- ✅ Human-in-the-loop editor (CLI)
+- ✅ Version tracking using ChromaDB
+- ✅ Search + feedback-aware retrieval
+- ✅ CLI for human feedback and final editing
 
-Stored rewritten output for future human-in-the-loop feedback
+---
 
-# DAY 3
-Today, I implemented a basic CLI-based human-in-the-loop interface to review and finalize AI-generated content. The script displays the original, AI-spun, and AI-reviewed versions of the chapter, and prompts the user to either accept the reviewed version or manually edit it before saving.
+## 🧱 Tech Stack
 
-✅ Tasks Completed:
+- Python
+- Playwright (web scraping)
+- OpenAI API (GPT-3.5)
+- ChromaDB (vector store)
+- Dotenv (API key management)
 
-Created human_interface/editor.py to handle user review and editing
+---
 
-Enhanced app_day2.py to integrate human feedback into the AI workflow
+## 📂 How to Run
 
-Enabled a simple decision flow: accept reviewed or edit manually
+1. Clone the repo
+2. Create a `.env` file with your OpenAI key:
+    ```
+    OPENAI_API_KEY=your_key_here
+    ```
+3. Install dependencies:
+    ```
+    pip install -r requirements.txt
+    playwright install
+    ```
+4. Run the main app:
+    ```
+    python app.py
+    ```
+5. Run search test:
+    ```
+    python search_test.py
+    ```
 
-Saved the finalized version to final_version.txt for version tracking
+---
 
-🧪 Features Implemented:
+## 🎥 Demo Video
 
-Preview first 500 characters of each version for quick comparison
+👉 [Insert Loom or Google Drive link here]
 
-CLI prompt to guide the user's decision
+---
 
-Manual editing supported via standard input (CTRL+D/CTRL+Z to finish)
+## ⚠️ Disclaimer
 
+This project was built purely for **evaluation purposes only** as part of an internship task.  
+The developer retains full rights to all work.
 
-# DAY 4
-Today, I integrated ChromaDB to handle versioning and persistent storage of the different content states in the automated book workflow. This allows efficient storage and retrieval of:
+---
 
-The original scraped text
+## 📬 Author
 
-AI-spun version
-
-AI-reviewed version
-
-Final human-approved version
-
-This structure enables intelligent querying and retrieval later in the pipeline (supporting RL-based search in upcoming steps).
-
-✅ Tasks Completed:
-
-Installed and configured ChromaDB as a local vector database
-
-Stored all content versions (original, spun, reviewed, final) as documents with metadata
-
-Implemented basic retrieval interface to fetch stored versions for inspection or reuse
-
-🧪 Features Implemented:
-
-Consistent version tracking across each processing stage
-
-Use of document IDs and metadata (e.g. version type, timestamp)
-
-Verified storage and retrieval via test script
+- Aryan Gupta  
+- [GitHub Profile](https://github.com/aryangupta-455)
