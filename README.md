@@ -13,4 +13,26 @@ Integrated OpenAI API for content generation
 Developed script to spin chapter text
 
 Stored rewritten output for future human-in-the-loop feedback
-  
+
+# DAY 3
+Today, I implemented a basic CLI-based human-in-the-loop interface to review and finalize AI-generated content. The script displays the original, AI-spun, and AI-reviewed versions of the chapter, and prompts the user to either accept the reviewed version or manually edit it before saving.
+
+✅ Tasks Completed:
+
+Created human_interface/editor.py to handle user review and editing
+
+Enhanced app_day2.py to integrate human feedback into the AI workflow
+
+Enabled a simple decision flow: accept reviewed or edit manually
+
+Saved the finalized version to final_version.txt for version tracking
+
+🧪 Features Implemented:
+
+Preview first 500 characters of each version for quick comparison
+
+CLI prompt to guide the user's decision
+
+Manual editing supported via standard input (CTRL+D/CTRL+Z to finish)
+
+
