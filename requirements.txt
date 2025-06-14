@@ -1,0 +1,6 @@
+playwright
+numpy
+pandas
+streamlit
+openai
+python-dotenv
