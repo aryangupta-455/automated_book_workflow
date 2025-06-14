@@ -36,3 +36,31 @@ CLI prompt to guide the user's decision
 Manual editing supported via standard input (CTRL+D/CTRL+Z to finish)
 
 
+# DAY 4
+Today, I integrated ChromaDB to handle versioning and persistent storage of the different content states in the automated book workflow. This allows efficient storage and retrieval of:
+
+The original scraped text
+
+AI-spun version
+
+AI-reviewed version
+
+Final human-approved version
+
+This structure enables intelligent querying and retrieval later in the pipeline (supporting RL-based search in upcoming steps).
+
+✅ Tasks Completed:
+
+Installed and configured ChromaDB as a local vector database
+
+Stored all content versions (original, spun, reviewed, final) as documents with metadata
+
+Implemented basic retrieval interface to fetch stored versions for inspection or reuse
+
+🧪 Features Implemented:
+
+Consistent version tracking across each processing stage
+
+Use of document IDs and metadata (e.g. version type, timestamp)
+
+Verified storage and retrieval via test script
