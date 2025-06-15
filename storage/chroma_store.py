@@ -1,7 +1,7 @@
 import chromadb
-from chromadb.config import Settings
+import chromadb
 
-client = chromadb.Client(Settings(chroma_db_impl="duckdb+parquet", persist_directory="./chroma_db"))
+client = chromadb.PersistentClient(path="./chroma_db")
 
 collection = client.get_or_create_collection(name="chapter_versions")
 
